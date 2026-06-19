@@ -1,14 +1,11 @@
 import express from "express"
-import creatorCardController from "../controller/creatorCard.controller.js";
+import CreatorCardController from "../controller/creatorCard.controller.js";
 const router = express.Router();
 
-// POST /creator-cards - Create a new creator card
-router.post('/creator-cards', creatorCardController.create);
+router.post('/creator-cards', CreatorCardController.create);
 
-// GET /creator-cards/:slug - Get a public card by slug
-router.get('/creator-cards/:slug', creatorCardController.getPublic);
+router.get('/creator-cards/:slug', CreatorCardController.getPublic);
 
-// DELETE /creator-cards/:slug - Delete a card by slug
-router.delete('/creator-cards/:slug', creatorCardController.delete);
+router.delete('/creator-cards/:slug', CreatorCardController.delete);
 
 export default router;

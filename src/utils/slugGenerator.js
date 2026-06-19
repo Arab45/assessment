@@ -1,9 +1,6 @@
 import CreatorCard from "../models/CreatorCard.js";
 
 
-
-// Auto-generate a slug from a title
-
 export const generateSlugFromTitle = (title) => {
   let slug = title
     .toLowerCase()
@@ -19,7 +16,6 @@ export const generateSlugFromTitle = (title) => {
 };
 
 // Generate a random alphanumeric suffix
-
 export const generateRandomSuffix = (length = 6) => {
   const chars = 'abcdefghijklmnopqrstuvwxyz0123456789';
   let result = '';
@@ -29,8 +25,6 @@ export const generateRandomSuffix = (length = 6) => {
   return result;
 };
 
-// Check if a slug is already taken
-
 export const isSlugTaken = async (slug) => {
   const existingCard = await CreatorCard.findOne({ 
     slug, 
@@ -39,7 +33,6 @@ export const isSlugTaken = async (slug) => {
   return !!existingCard;
 };
 
-// Generate a unique slug from a title
 
 export const generateUniqueSlug = async (title) => {
   const baseSlug = generateSlugFromTitle(title);

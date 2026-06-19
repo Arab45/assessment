@@ -42,9 +42,3 @@ export class AppError extends Error {
     Error.captureStackTrace(this, this.constructor);
   }
 }
-
-// export default {
-//   ERROR_CODES,
-//   ERROR_MESSAGES,
-//   AppError,
-// };

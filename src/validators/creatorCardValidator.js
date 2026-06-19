@@ -1,4 +1,6 @@
 import validator from "validator"
+
+
 /**
  * Validates the creator card creation request
  * Returns an array of validation errors, or empty array if valid
